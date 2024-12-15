@@ -27,6 +27,11 @@ a,
   transition: all 300ms ease;
 }
 
+#icon {
+  width: 30px;
+  cursor: pointer;
+}
+
 /* DESKTOP NAV */
 
 nav,
@@ -323,36 +328,44 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
 .experience-details-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap; /* Wraps items to multiple rows */
+  justify-content: space-evenly; /* Even spacing horizontally */
+  gap: 2rem; /* Vertical and horizontal spacing between items */
+  text-align: center;
 }
 
 .article-container {
   display: flex;
   text-align: initial;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows wrapping to new rows */
   flex-direction: row;
-  gap: 2.5rem;
-  justify-content: space-around;
+  gap: 2rem; /* Adjusts spacing between items */
+  justify-content: space-between; /* Ensures items are spaced nicely */
+  max-width: 24rem; /* Controls overall container width for 2x2 layout */
+  margin: 0 auto; /* Centers the container */
 }
 
 article {
   display: flex;
-  width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  flex-direction: row; /* Icon and text align horizontally */
+  align-items: center; /* Vertically aligns content */
+  gap: 0.5rem; /* Space between the icon and text */
+  width: 45%; /* Each item takes up 45% of the width for 2x2 */
+  box-sizing: border-box;
 }
 
 article .icon {
-  cursor: default;
+  width: 1.5rem; /* Consistent size for icons */
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* PROJECTS section */
@@ -371,6 +384,7 @@ article .icon {
     border: rgb(53, 53, 53) 0.1rem solid;
     width: 90%;
     height: 90%;
+    align-;
   }
   
   .project-title {
@@ -433,3 +447,23 @@ article .icon {
   footer p {
     text-align: center;
   }
+
+
+.typewriter-text {
+  font-size: 5em;
+  letter-spacing: 10px;
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(18), cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% { border-color: transparent }
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
