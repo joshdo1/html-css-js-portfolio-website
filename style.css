@@ -247,7 +247,8 @@ section {
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: white;
+  color: black; /* Add this to change text color to black */
 }
 
 .btn-color-2 {
